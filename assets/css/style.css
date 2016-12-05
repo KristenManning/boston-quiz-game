@@ -1,0 +1,37 @@
+body{
+    background: url("../images/boston.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+}
+
+h1{
+	color: black;
+	font-size: 145px;
+	font-family: 'Abril Fatface', cursive;
+	font-weight: bolder;
+}
+#title{
+	text-indent: 10px;
+	-webkit-text-stroke-width: 2.5px;
+   	-webkit-text-stroke-color: black;
+}
+.title_img{
+	height: 115px;
+	width: auto;
+	position: relative;
+	bottom:15px;
+}
+
+.bgClip {
+    background:url('../images/flag.jpg');
+    background-position:0 0;
+    color:transparent;
+    -webkit-font-smoothing:antialiased;
+    -webkit-background-clip:text;
+    -moz-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
