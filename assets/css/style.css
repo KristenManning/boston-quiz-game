@@ -1,3 +1,4 @@
+
 body{
     background: url("../images/boston.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -12,6 +13,14 @@ h1{
 	font-family: 'Abril Fatface', cursive;
 	font-weight: bolder;
 }
+
+h3{
+	color:  #09144A;
+	font-size: 24px;
+	font-weight: bold;
+
+
+}
 #title{
 	text-indent: 10px;
 	-webkit-text-stroke-width: 2.5px;
@@ -24,7 +33,17 @@ h1{
 	bottom:15px;
 }
 
-.bgClip {
+.question_alert{
+	background-color: #FFF0EF;
+	opacity: 0.7;
+	width: 80%;
+	padding-left: 20px;
+	border-style: solid; 
+	border-color: #3B5330;
+	border-width: 4px;
+}
+
+/*.bgClip {
     background:url('../images/flag.jpg');
     background-position:0 0;
     color:transparent;
@@ -33,5 +52,16 @@ h1{
     -moz-background-clip:text;
     background-clip:text;
     -webkit-text-fill-color:transparent;
+
+}*/
+
+#timer{
+/*	background-color: #662C8F;*/
+	color: #994A26;
+	margin: 20px;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bolder;
 
 }
