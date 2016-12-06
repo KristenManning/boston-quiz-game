@@ -14,41 +14,40 @@ $(document).ready(function() {
     sol: "The Citgo sign is located in Boston's Kenmore Sq."
   }
 
-
   var q1 = {
-    question_text: "This is the second [1th] question",
-    button0_text: "1",
-    button1_text: "2",
-    button2_text: "3",
+    question_text: "The length of the sidewalk on the Harvard (Mass Ave.) Bridge is marked with which unit of measure?",
+    button0_text: "Smoots",
+    button1_text: "Shmiggles",
+    button2_text: "Smurfs",
     correct_answer: 0,
-    sol: "The Citgo sign is located in Boston's Kenmore Sq."
+    sol: "The length of sidewalk along the Harvard Bridge is marked with Smoots."
   }
 
   var q2 = {
-    question_text: "This is the third [2nd] question",
-    button0_text: "1",
-    button1_text: "2",
-    button2_text: "3",
-    correct_answer: 0,
-    sol: "This is the 3rd solution"
+    question_text: "Which city is located directly across the Charles River from Boston's Fenway, Back Bay and Beacon Hill neighboorhoods?",
+    button0_text: "Charlestown",
+    button1_text: "Harvard",
+    button2_text: "Cambridge",
+    correct_answer: 2,
+    sol: "Cambridge is located across the river from the Fenway, Back Bay, and Beacon Hill area of Boston."
   }
 
   var q3 = {
-    question_text: "In which Boston area 'square' is the Citgo sign located?",
-    button0_text: "Kenmore",
-    button1_text: "Kendall",
-    button2_text: "Copley",
-    correct_answer: 0,
-    sol: "The Citgo sign is located in Boston's Kenmore Sq."
+    question_text: "The Charles River ________ is a park along the Charles River Basin.",
+    button0_text: "Promenade",
+    button1_text: "Esplanade",
+    button2_text: "Boardwalk",
+    correct_answer: 1,
+    sol: "The park along the Basin is called the Esplanade."
   }
 
   var q4 = {
-    question_text: "In which Boston area 'square' is the Citgo sign located?",
-    button0_text: "Kenmore",
-    button1_text: "Kendall",
-    button2_text: "Copley",
-    correct_answer: 0,
-    sol: "The Citgo sign is located in Boston's Kenmore Sq."
+    question_text: "A section of which Cambridge street is closed on Sundays in the warmer months to engourage recreation?",
+    button0_text: "Massachusetts Avenue",
+    button1_text: "Memorial Drive",
+    button2_text: "Brattle Street",
+    correct_answer: 1,
+    sol: "Memorial Dr. closes on Sundays in from late April to November."
   }
 
   var q5 = {
