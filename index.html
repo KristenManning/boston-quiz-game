@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kristen's Hangman Game</title>
+  <title>Kristen's Trivia Game</title>
   <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -29,27 +29,32 @@
 
   <!-- Second row - banner changes throughout gameplay -->
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
     	<!-- margin left3col -->
     </div>
-    <div class="col-md-6">
-      <div class="question_alert">
-        <h3 class="question_text">
-          In which Boston area "square" is the Citgo sign located? 
-        </h3>
-        <div class="radio">
-          <label><input type="radio" name="optradio">Kenmore</label>
+    <div class="col-md-4">
+      <div class="main_box">
+        <div class="main_box_1">
+          <h3>
+            Welcome to the Boston Trivia Game! 
+          <br>
+          </h3>
         </div>
-        <div class="radio">
-          <label><input type="radio" name="optradio">Kendall</label>
+
+        <div class="main_box_2">
+          <p id="choices">
+            You will have 15 seconds to answer each multiple choice question. Click the start button whenever you're ready to begin!
+          </p>
+        <br>
+        <div class = "main_box_3">
+          <div id="start">
+            <button class="btn btn-default" id="start" type="submit">Start</button>
+          </div>
         </div>
-        <div class="radio">
-          <label><input type="radio" name="optradio">Copley</label>
-        </div>
-          <button class="btn btn-default" type="submit">Pusheen</button>
+        <br>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
     	<!-- margin right3col -->
     </div>
   </div>
@@ -58,3 +63,5 @@
 
 </body>
 </html>
+
+
