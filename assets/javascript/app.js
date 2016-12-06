@@ -3,6 +3,7 @@ $(document).ready(function() {
 
   var correct_count = 0;
   var incorrect_count = 0;
+  var seconds_remaining = 15; 
 
   var q0 = {
     question_text: "In which Boston area 'square' is the Citgo sign located?",
@@ -120,6 +121,33 @@ $(document).ready(function() {
     button2_text: "Copley",
     correct_answer: 0,
     sol: "The Citgo sign is located in Boston's Kenmore Sq."
+
+
+  }
+
+  function run_timer() {
+      console.log("run_timer runs")
+      page_counter = setInterval(decrement, 1000);
+    }
+
+  function decrement() {
+    seconds_remaining--;
+    console.log(seconds_remaining)
+    $("#timer").html("<h2>" + seconds_remaining + " seconds</h2>");
+    if (seconds_remaining == 0) {
+      stop();
+      $(".main_box_1").html("<h3> Uh-oh! You ran out of time. <br></h3>");
+      $("#choices").html("<p>" + Q.sol + "</p>")
+      question++ 
+      Q = pool[question]
+      incorrect_count++
+      $(".main_box_3").html("<h3>Correct Responses: " + correct_count + "<br>Incorrect Responses: " + incorrect_count +"</h3>")
+      setTimeout(play, 1800)
+    }
+  }
+
+  function stop() {
+    clearInterval(page_counter);
   }
 
   var pool = [q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12];
@@ -133,6 +161,8 @@ $(document).ready(function() {
       question++ 
       Q = pool[question]
       incorrect_count++
+      $(".main_box_3").html("<h3>Correct Responses: " + correct_count + "<br>Incorrect Responses: " + incorrect_count +"</h3>")
+      stop()
       setTimeout(play, 1500)
     } else {
       $(".main_box_1").html("<h3> That's correct!<br></h3>");
@@ -140,6 +170,8 @@ $(document).ready(function() {
       question++ 
       Q = pool[question]
       correct_count++
+      $(".main_box_3").html("<h3>Correct Responses: " + correct_count + "<br>Incorrect Responses: " + incorrect_count +"</h3>")
+      stop()
       setTimeout(play, 1500)
       // setTimeout(play, 1500)
     }
@@ -149,6 +181,9 @@ $(document).ready(function() {
     $(".main_box_1").html("<h3>" + Q.question_text+ "<br></h3>");
     $("#choices").html('<button type="button" data-num="0" class="btn btn-primary choice">' + Q.button0_text + '</button> <button type="button" data-num="1" class="btn btn-primary choice">' + Q.button1_text + '</button> <button type="button" data-num="2" class="btn btn-primary choice">' + Q.button2_text + '</button>');
     $("#start").html('');
+    seconds_remaining = 15; 
+    $("#timer").html("<h2>" + seconds_remaining + " seconds</h2>");
+    run_timer();
     $(".choice").click(check_answer)
   };
 

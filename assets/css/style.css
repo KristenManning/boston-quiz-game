@@ -9,10 +9,16 @@ body{
 
 h1{
 	color: black;
-	font-size: 145px;
+	font-size: 135px;
 	font-family: 'Abril Fatface', cursive;
 	font-weight: bolder;
 	opacity: 1;
+}
+
+h2{
+	border-style: solid;
+	border-width: 8px;
+	border-color: #CF6D37;
 }
 
 h3{
@@ -61,14 +67,14 @@ p{
 
 }*/
 
-#timer{
+#timer, h2{
 /*	background-color: #662C8F;*/
 	color: #CF6D37;
-	margin: 20px;
+	margin: 15px;
 	margin-top: 50px;
-	text-align: center;
-	font-size: 40px;
+	font-size: 50px;
 	font-weight: bolder;
+	text-align: center
 
 }
 
