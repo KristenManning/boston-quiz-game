@@ -43,45 +43,45 @@ $(document).ready(function() {
 
   var q4 = {
     question_text: "A section of which Cambridge street is closed on Sundays in the warmer months to engourage recreation?",
-    button0_text: "Massachusetts Avenue",
-    button1_text: "Memorial Drive",
-    button2_text: "Brattle Street",
+    button0_text: "Mass. Ave.",
+    button1_text: "Memorial Dr.",
+    button2_text: "Brattle St.",
     correct_answer: 1,
     sol: "Memorial Dr. closes on Sundays in from late April to November."
   }
 
   var q5 = {
-    question_text: "In which Boston area 'square' is the Citgo sign located?",
-    button0_text: "Kenmore",
-    button1_text: "Kendall",
-    button2_text: "Copley",
-    correct_answer: 0,
-    sol: "The Citgo sign is located in Boston's Kenmore Sq."
+    question_text: "Which two universities have both sailing and rowing boathouses located in the Charles River Basin?",
+    button0_text: "Boston University & Harvard University",
+    button1_text: "Massachusetts Institute of Technology & Boston University",
+    button2_text: "Harvard University & Tufts University",
+    correct_answer: 1,
+    sol: "BU and MIT each have 2 boathouses -- one for sailing and one for rowing -- all located in the basin."
   }
 
   var q6 = {
-    question_text: "In which Boston area 'square' is the Citgo sign located?",
-    button0_text: "Kenmore",
-    button1_text: "Kendall",
-    button2_text: "Copley",
+    question_text: "Which Charles River bridge also crosses diagonally over the Grand Junction Railroad Bridge?",
+    button0_text: "BU Bridge",
+    button1_text: "Harvard Bridge",
+    button2_text: "Longfellow Bridge",
     correct_answer: 0,
-    sol: "The Citgo sign is located in Boston's Kenmore Sq."
+    sol: "The Grand Junction Railroad Bridge crosses the Charles River directly beneath the BU Bridge."
   }
 
   var q7 = {
-    question_text: "In which Boston area 'square' is the Citgo sign located?",
-    button0_text: "Kenmore",
-    button1_text: "Kendall",
-    button2_text: "Copley",
-    correct_answer: 0,
-    sol: "The Citgo sign is located in Boston's Kenmore Sq."
+    question_text: "The starting line for the Head of the Charles Regatta is located in front of which distinct building along the river?",
+    button0_text: "Museum of Science",
+    button1_text: "MIT Dome",
+    button2_text: "Cambridge Hyatt",
+    correct_answer: 2,
+    sol: "HOCR begins directly in front of the pyramid-shaped Hyatt hotel."
   }
 
   var q8 = {
-    question_text: "In which Boston area 'square' is the Citgo sign located?",
-    button0_text: "Kenmore",
-    button1_text: "Kendall",
-    button2_text: "Copley",
+    question_text: "The bike path along the Charles River is named after which American Physician?",
+    button0_text: "Dr. William Osler Abbott",
+    button1_text: "Dr. Joseph Warren",
+    button2_text: "Dr. Paul Dudley White",
     correct_answer: 0,
     sol: "The Citgo sign is located in Boston's Kenmore Sq."
   }
@@ -93,35 +93,6 @@ $(document).ready(function() {
     button2_text: "Copley",
     correct_answer: 0,
     sol: "The Citgo sign is located in Boston's Kenmore Sq."
-  }
-
-  var q10 = {
-    question_text: "In which Boston area 'square' is the Citgo sign located?",
-    button0_text: "Kenmore",
-    button1_text: "Kendall",
-    button2_text: "Copley",
-    correct_answer: 0,
-    sol: "The Citgo sign is located in Boston's Kenmore Sq."
-  }
-
-  var q11 = {
-    question_text: "In which Boston area 'square' is the Citgo sign located?",
-    button0_text: "Kenmore",
-    button1_text: "Kendall",
-    button2_text: "Copley",
-    correct_answer: 0,
-    sol: "The Citgo sign is located in Boston's Kenmore Sq."
-  }
-
-  var q12 = {
-    question_text: "In which Boston area 'square' is the Citgo sign located?",
-    button0_text: "Kenmore",
-    button1_text: "Kendall",
-    button2_text: "Copley",
-    correct_answer: 0,
-    sol: "The Citgo sign is located in Boston's Kenmore Sq."
-
-
   }
 
   function run_timer() {
@@ -149,7 +120,7 @@ $(document).ready(function() {
     clearInterval(page_counter);
   }
 
-  var pool = [q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12];
+  var pool = [q0, q1, q2, q3, q4, q5, q6, q7, q8, q9];
   var question = 0; 
   var Q = pool[question]; 
 
