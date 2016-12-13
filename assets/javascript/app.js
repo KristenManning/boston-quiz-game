@@ -20,7 +20,7 @@ $(document).ready(function() {
     button1_text: "Shmiggles",
     button2_text: "Smurfs",
     correct_answer: 0,
-    sol: "The length of sidewalk along the Harvard Bridge is marked with Smoots."
+    sol: "The length of the sidewalk along the Harvard Bridge is marked with Smoots."
   }
 
   var q2 = {
@@ -52,9 +52,9 @@ $(document).ready(function() {
 
   var q5 = {
     question_text: "Which two universities have both sailing and rowing boathouses located in the Charles River Basin?",
-    button0_text: "Boston University & Harvard University",
-    button1_text: "Massachusetts Institute of Technology & Boston University",
-    button2_text: "Harvard University & Tufts University",
+    button0_text: "BU & Harvard",
+    button1_text: "MIT & BU",
+    button2_text: "Harvard & Tufts",
     correct_answer: 1,
     sol: "BU and MIT each have 2 boathouses -- one for sailing and one for rowing -- all located in the basin."
   }
@@ -69,12 +69,12 @@ $(document).ready(function() {
   }
 
   var q7 = {
-    question_text: "The starting line for the Head of the Charles Regatta is located in front of which distinct building along the river?",
-    button0_text: "Museum of Science",
-    button1_text: "MIT Dome",
-    button2_text: "Cambridge Hyatt",
-    correct_answer: 2,
-    sol: "HOCR begins directly in front of the pyramid-shaped Hyatt hotel."
+    question_text: "The _____ End neighborhood is home to many Italian restaurants, including the famous Mike's Pastries.",
+    button0_text: "North",
+    button1_text: "South",
+    button2_text: "West",
+    correct_answer: 0,
+    sol: "The North End is Boston's Italian neighborhood."
   }
 
   var q8 = {
@@ -82,17 +82,17 @@ $(document).ready(function() {
     button0_text: "Dr. William Osler Abbott",
     button1_text: "Dr. Joseph Warren",
     button2_text: "Dr. Paul Dudley White",
-    correct_answer: 0,
-    sol: "The Citgo sign is located in Boston's Kenmore Sq."
+    correct_answer: 2,
+    sol: "The Dudley White Memorial Bike Path runs along the Charles River."
   }
 
   var q9 = {
-    question_text: "In which Boston area 'square' is the Citgo sign located?",
-    button0_text: "Kenmore",
-    button1_text: "Kendall",
-    button2_text: "Copley",
-    correct_answer: 0,
-    sol: "The Citgo sign is located in Boston's Kenmore Sq."
+    question_text: "Where do the Boston Pops perform on the 4th of July each year?",
+    button0_text: "TD Garden",
+    button1_text: "DCR Hatch Shell",
+    button2_text: "Symphony Hall",
+    correct_answer: 1,
+    sol: "The Boston Pops perform at the DCR Hatch Shell on the river."
   }
 
   function run_timer() {
@@ -111,7 +111,7 @@ $(document).ready(function() {
       question++ 
       Q = pool[question]
       incorrect_count++
-      setTimeout(play, 1800)
+      setTimeout(play, 2500)
     }
   }
 
@@ -131,7 +131,7 @@ $(document).ready(function() {
       Q = pool[question]
       incorrect_count++
       stop()
-      setTimeout(play, 1800)
+      setTimeout(play, 2500)
     } else {
       $(".main_box_1").html("<h3> That's correct!<br></h3>");
       $("#choices").html("<p>" + Q.sol + "</p>")
@@ -139,20 +139,20 @@ $(document).ready(function() {
       Q = pool[question]
       correct_count++
       stop()
-      setTimeout(play, 1800)
+      setTimeout(play, 2500)
       // setTimeout(play, 1500)
     }
   }
 
   function play() {
-    if (question == 9){
+    if (question == 10){
       $(".main_box_1").html("<h3>Correct Responses: " + correct_count + "<br>Incorrect Responses: " + incorrect_count +"</h3>")
       $("#choices").html("<p>Click 'restart' to play again!</p>")
       $(".main_box_3").html('<button class="btn btn-default" id="restart">Restart</button>')
       $("#restart").click(reset);
     }else{
     $(".main_box_1").html("<h3>" + Q.question_text+ "<br></h3>");
-    $("#choices").html('<button type="button" data-num="0" class="btn btn-primary choice">' + Q.button0_text + '</button> <button type="button" data-num="1" class="btn btn-primary choice">' + Q.button1_text + '</button> <button type="button" data-num="2" class="btn btn-primary choice">' + Q.button2_text + '</button>');
+    $("#choices").html('<br><button type="button" data-num="0" class="btn btn-primary choice">' + Q.button0_text + '</button> <button type="button" data-num="1" class="btn btn-primary choice">' + Q.button1_text + '</button> <button type="button" data-num="2" class="btn btn-primary choice">' + Q.button2_text + '</button>');
     $("#start").html('');
     seconds_remaining = 15; 
     $("#timer").html("<h2>" + seconds_remaining + " seconds</h2>");
@@ -161,13 +161,12 @@ $(document).ready(function() {
   };
 
   function reset() {
-    alert("Hi")
     correct_count = 0;
     incorrect_count = 0;
     seconds_remaining = 15; 
     question=0;
     Q=pool[question];
-    console.log(Q)
+    $(".main_box_3").html("");
     play()
 
 
@@ -175,19 +174,4 @@ $(document).ready(function() {
 
   $("#start").click(play); 
   
-})
-        // // If the user completed the word, tell them they won, then reset everything  
-        // if (comp_checker()) {
-        //   reset_hint();
-        //   setTimeout(win_display, 100)
-        //   setTimeout(reset, 2900)
-        
-        // // If the user correctly guessed a letter but still has more work to do, just update the skeleton 
-        // }else if (correct_guess) {
-        //   $("#skeldiv").html(skeleton);
-
-        // // If the user incorrectly guessed and it was their final guess, tell them they lost, reveal correct answer, then reset everything. 
-        // }else if (guesses_remaining == 1) {      
-        //   reset_hint();
-        //   setTimeout(lose_display, 100)
-        //   setTimeout(reset, 3200)         
+})       
